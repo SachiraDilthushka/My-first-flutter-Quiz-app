@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app1/result.dart';
 import './result.dart';
 import './quiz.dart';
-
-// void main() {
+// void main(){
 //   runApp(MyApp());
 // }
 void main() => runApp(MyApp());
@@ -15,7 +14,6 @@ class MyApp extends StatefulWidget {
     return _MyAppState();
   }
 }
-
 class _MyAppState extends State<MyApp> {
   final _questions = const [
     {
@@ -64,7 +62,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -75,7 +73,7 @@ class _MyAppState extends State<MyApp> {
             ? Quiz(
                 answerQuestion: _answerQuestion,
                 questionIndex: _questionIndex,
-                questions: _questions,
+                questions : _questions,
               )
             : Result(_totalScore,_resetQuiz),
       ),
